@@ -2,7 +2,7 @@
 
 int main (void) { //Se crea la funcion principal del programa//
 
-    int numero, digito, sumatotal=0; //Se agrega las variables del programa//
+    int numero, digito, suma_digito=0, ayudante1, ayudante2, total, digitotal=0; //Se agrega las variables del programa//
     
     printf ("Ingrese un numero: "); //Se imprime la indicacion//
     scanf ("%d", &numero); //Se lee el numero que va ingresar el usuario//
@@ -13,10 +13,17 @@ int main (void) { //Se crea la funcion principal del programa//
         numero = numero/10; //Se divide el numero para 10 para seguir encontrando los digitios que faltan//
         printf ("El primer digito es: %d \n", digito);
         printf ("El numero es: %d \n", numero);
+        suma_digito=digito+suma_digito;
 
-    } while (numero>0);
+        
+
+    } while (numero>0 && ayudante2>0);
     
 
+
+
+    
+    printf ("La suma de los digitos del numero leido es: %d \n", suma_digito);
 
     return 0;
 }
